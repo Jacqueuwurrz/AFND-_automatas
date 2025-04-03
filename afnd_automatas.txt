@@ -1,0 +1,16 @@
+import re
+
+def validar_contrasena(contrasena):
+    tiene_caracter_especial = re.search(r'[!@#$%^&*(),.?":{}|<>]', contrasena)
+    tiene_numero = re.search(r'\d', contrasena)
+    tiene_letra = re.search(r'[a-zA-Z]', contrasena)
+
+    return bool(tiene_caracter_especial and tiene_numero and tiene_letra)
+
+while True:
+    contrasena = input("Ingresa tu contraseña: ")
+    if validar_contrasena(contrasena):
+        print("contraseña valida")
+        break  
+    else:
+        print("La contraseña no es válida, intenta de nuevo.")
