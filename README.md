@@ -1,0 +1,2 @@
+# AFND-_automatas
+Objetivo: 
